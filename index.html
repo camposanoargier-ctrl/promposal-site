@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For My Babyy 💙</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+    }.card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px 25px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.music {
+  margin: 15px 0 25px;
+}
+
+.music a {
+  color: #fff;
+  text-decoration: underline;
+  font-size: 0.95rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+button {
+  border: none;
+  border-radius: 25px;
+  padding: 12px 22px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.yes {
+  background: #1e90ff;
+  color: #fff;
+}
+
+.yes:hover {
+  background: #187bcd;
+  transform: scale(1.05);
+}
+
+.no {
+  background: #ffffff;
+  color: #1e90ff;
+}
+
+.no:hover {
+  transform: translateY(-3px);
+}
+
+.hidden {
+  display: none;
+}
+
+.result {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.heart {
+  font-size: 2rem;
+  animation: beat 1s infinite;
+}
+
+@keyframes beat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div id="question">
+      <h1>Hi My Babyy 💙</h1>
+      <p>
+        From the moment you came into my life, everything changed for the better.
+        You make me smile, you give me strength, and you make my days brighter.
+        <br><br>
+        I made this just for you, because you mean so much to me 🥺💙
+      </p><div class="music">
+    🎵 <a href="https://open.spotify.com/track/7BqBn9nzAq8spo5e7cZ0dJ?si=wT1vKyy-Rt28-OKuYbrbHw" target="_blank">Play this song first</a>
+  </div>
+
+  <h2>Will you go to Prom with me? 💃🕺💙</h2>
+
+  <div class="buttons">
+    <button class="yes" onclick="sayYes()">YES BAB 💙</button>
+    <button class="no" onclick="moveNo()">No 😅</button>
+  </div>
+</div>
+
+<div id="answer" class="hidden">
+  <h1>YAYYY!! 😍💙</h1>
+  <p class="result">
+    Thank you, my babyy 🥰💙<br>
+    I promise to take care of you, respect you, and always choose you.
+    <br><br>
+    Prom will be extra special because it’s with you ✨
+  </p>
+  <div class="heart">💙💙💙</div>
+  <p>Always yours 💞</p>
+</div>
+
+  </div>  <script>
+    const noBtn = document.querySelector('.no');
+
+    function sayYes() {
+      document.getElementById('question').classList.add('hidden');
+      document.getElementById('answer').classList.remove('hidden');
+    }
+
+    function moveNo() {
+      const x = Math.random() * 200 - 100;
+      const y = Math.random() * 200 - 100;
+
+      noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    }
+  </script></body>
+</html>
